@@ -1,0 +1,653 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ปรับรูปภาพ */
+.profile-pic {
+  width: 250px;
+  height: auto;
+  border-radius: 7%;
+  /* ทำให้รูปภาพเป็นวงกลม */
+  margin: auto;
+  display: block;
+  border: 3px solid #b38c61;
+  /* เพิ่มเส้นขอบสีเทาอ่อน */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  /* เพิ่มเงาเล็กน้อย */
+}
+
+/* ฟอนต์ควรยืดหยุ่นตามขนาดหน้าจอ ใช้หน่วยที่ไม่คงที่ (เช่น em, rem, vw) แทนที่จะใช้ px เพื่อให้ฟอนต์ปรับขนาดตามหน้าจอ:*/
+/* 1rem;  ขนาดฟอนต์ที่ปรับตัวตามขนาดของเครื่อง */
+/* 3vw; ขนาดฟอนต์ 3% ของความกว้างหน้าจอ */
+
+
+
+
+
+h1 {
+  font-family: "Itim", serif;
+  text-align: center;
+  /* จัดให้อยู่ตรงกลาง */
+  font-weight: normal;
+  font-size: 2rem;
+  /* ขนาดฟอนต์ที่ปรับตัวตามขนาดของเครื่อง */
+  margin: auto;
+  /* ใช้ค่า auto ในขอบขวาและซ้ายเพื่อจัดให้อยู่กลาง */
+  width: 80%;
+  /* กำหนดความกว้าง */
+  line-height: -15;
+  /* ระยะห่างระหว่างบรรทัด */
+  padding-left: auto;
+  /* เพิ่มระยะห่างทางด้านซ้าย */
+}
+
+h2 {
+  font-family: "Itim", serif;
+  text-align: left;
+  /* จัดให้อยู่ทางซ้าย */
+  font-weight: normal;
+  font-size: 1.5rem;
+  /* ขนาดฟอนต์ที่ปรับตัวตามขนาดของเครื่อง */
+  margin-left: 0;
+  /* ระยะห่างด้านซ้ายเป็น 0 */
+  margin-right: auto;
+  /* ด้านขวาจะถูกจัดให้ห่าง */
+  line-height: auto;
+  /* ระยะห่างระหว่างบรรทัด */
+  padding-left: auto;
+}
+
+h3 {
+  font-family: "Itim", serif;
+  text-align: left;
+  /* จัดให้อยู่ทางซ้าย */
+  font-weight: normal;
+  font-size: 1.2rem;
+  /* ขนาดฟอนต์ที่ปรับตัวตามขนาดของเครื่อง */
+  margin-left: 0;
+  /* ระยะห่างด้านซ้ายเป็น 0 */
+  margin-right: auto;
+  /* ด้านขวาจะถูกจัดให้ห่าง */
+  line-height: 1.3;
+  /* ระยะห่างระหว่างบรรทัด */
+  padding-left: 0px;
+  /* เพิ่มระยะห่างทางด้านซ้าย */
+}
+
+h4 {
+  font-family: "Itim", serif;
+  text-align: left;
+  /* จัดให้อยู่ทางซ้าย */
+  font-weight: normal;
+  font-size: 1.2rem;
+  /* ขนาดฟอนต์ที่ปรับตัวตามขนาดของเครื่อง */
+  margin-left: 0;
+  /* ระยะห่างด้านซ้ายเป็น 0 */
+  margin-right: auto;
+  /* ด้านขวาจะถูกจัดให้ห่าง */
+  line-height: 1.3;
+  /* ระยะห่างระหว่างบรรทัด */
+  padding-left: 0px;
+  /* เพิ่มระยะห่างทางด้านซ้าย */
+}
+
+/* ขนาดสำหรับนิยาย */
+h6 {
+  font-family: "Itim", serif;
+  text-align: center;
+  /* จัดให้อยู่ทางซ้าย */
+  font-weight: normal;
+  font-size: 1.5rem;
+  /* ขนาดฟอนต์ที่ปรับตัวตามขนาดของเครื่อง */
+  margin: auto;
+  /* ใช้ค่า auto ในขอบขวาและซ้ายเพื่อจัดให้อยู่กลาง */
+  width: 80%;
+  /* กำหนดความกว้าง */
+  line-height: -15;
+  /* ระยะห่างระหว่างบรรทัด */
+  padding-left: auto;
+  /* เพิ่มระยะห่างทางด้านซ้าย */
+}
+
+p {
+  font-family: "Itim", serif;
+  text-align: left;
+  /* จัดให้อยู่ทางซ้าย */
+  font-weight: normal;
+  font-size: 1.1rem;
+  /* ขนาดฟอนต์ที่ปรับตัวตามขนาดของเครื่อง */
+  margin-left: 0;
+  /* ระยะห่างด้านซ้ายเป็น 0 */
+  margin-right: auto;
+  /* ด้านขวาจะถูกจัดให้ห่าง */
+  line-height: 1.3;
+  /* ระยะห่างระหว่างบรรทัด */
+  padding-left: 0px;
+  /* เพิ่มระยะห่างทางด้านซ้าย */
+}
+
+
+
+/* สีพื้นหลังเว็บ */
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #000000;
+  overflow-x: hidden;
+  /* เพื่อป้องกันการเลื่อนในแนวนอน */
+  transition: background-color 0.3s ease, color 0.3s ease; /* สมูทเมื่อเปลี่ยนโหมด */
+}
+
+/*container {
+  display: flex;
+  flex-direction: column;
+  gap: 22x;
+  color: #ffffff;
+  background-color: rgba(43, 41, 41, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+  margin: 0rem;
+  top: 0;
+  bottom: 0;
+  width: 55rem;
+  max-width: 100%;
+  position: relative;
+  overflow-wrap: break-word;
+  padding: 35px;
+   ปรับระยะห่างระหว่างตัวอักษรและขอบของ .container สามารถใช้ padding หรือ margin 
+  }
+*/
+
+/* คงขนาด .container และรูปแบบ Grid */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  color: #ffffff;
+  background-color: #222222;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+  margin: 0rem;
+  width: 55rem; /* กำหนดขนาดความกว้าง */
+  max-width: 100%;
+  padding: 35px;
+  min-height: fixed; /* กำหนดความสูงขั้นต่ำ */
+}
+
+/* การจัดรูปภาพ */
+.container .image {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* จัดเนื้อหาหลัก */
+.container .content {
+  font-size: 1.2em;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+
+
+
+
+/* ปรับเมนูด้านข้าง */
+.sidenav {
+  height: 100%;
+  width: 0;
+  /* ตั้งค่าเริ่มต้นให้ปิด */
+  position: fixed;
+  /* ใช้ position fixed เพื่อให้อยู่ในตำแหน่งที่คงที่ */
+  top: 0;
+  left: 0;
+  background-color: #000000e6;
+  overflow-x: hidden;
+  transition: 0.3s;
+  /* ใช้ transition เพื่อความสมูท */
+  padding-top: 60px;
+  z-index: 999;
+  /* ให้อยู่ด้านหน้า */
+}
+
+/* แถบด้านข้าง & สีตัวหนังสือพื้นฐาน */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-family: "Itim", serif;
+  font-weight: 500;
+  font-size: 25px;
+  color: #fdebc7;
+  display: block;
+  transition: color 0.3s, transform 0.3s, opacity 0.3s;
+  /* เพิ่ม transition */
+  opacity: 1;
+  position: relative;
+  z-index: 2;
+  /* ทำให้ข้อความอยู่บนสุด */
+  margin-left: -17%;
+}
+
+/* สีตัวหนังสือเมื่อลอย */
+.sidenav a:hover {
+  color: #b38c61;
+  transform: translateY(-5px);
+  /* ลอยขึ้น */
+}
+
+.sidenav img {
+  display: block;
+  margin: -5%;
+  margin-top: 0%;
+  /* เพิ่มระยะห่างด้านล่าง */
+  margin-bottom: 5%;
+  /* เพิ่มระยะห่างด้านล่าง */
+  width: 100%;
+  border-radius: 7%;
+}
+
+/* สร้างเอฟเฟกต์เมื่อปิดเมนู */
+.sidenav.closed a {
+  opacity: 0;
+  /* ทำให้ข้อความค่อย ๆ เลือนหาย */
+  z-index: -1;
+  /* ทำให้ข้อความถูก "กลืนหายไป" */
+}
+
+/* สีเมื่อชี้ปุ่มเปิด / ปิด */
+.menu-btn:hover {
+  color: #b38c61;
+}
+
+/* ปุ่มสำหรับเปิด/ปิด แถบข้าง */
+.menu-btn {
+  font-size: 30px;
+  cursor: pointer;
+  color: #fdebc7;
+  background: none;
+  border: none;
+  position: fixed;
+  /* ใช้ position fixed เพื่อให้อยู่ในตำแหน่งคงที่ */
+  top: 20px;
+  left: 20px;
+  transition: color 0.3s ease;
+  z-index: 1100;
+  /* ปุ่มอยู่เหนือเมนู */
+}
+
+/* เอฟเฟกต์ทำให้เนื้อหาจางลงเมื่อเปิดเมนู */
+body.dimmed .container {
+  filter: brightness(33%);
+}
+
+
+
+
+
+
+/* ปุ่มค้นหา */
+#search-icon {
+  display: flex;
+  /* ใช้ Flexbox */
+  align-items: center;
+  /* จัดให้อยู่กึ่งกลางแนวตั้ง */
+  justify-content: center;
+  /* จัดให้อยู่กึ่งกลางแนวนอน */
+  width: 40px;
+  /* ขนาดฮิตบ็อกซ์ */
+  height: 40px;
+  /* ขนาดฮิตบ็อกซ์ */
+  color: #fdebc7;
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  position: relative;
+  /* ให้ตำแหน่งของไอคอนไม่เปลี่ยน */
+  z-index: 1100;
+  /* เพิ่ม z-index เพื่อให้อยู่ด้านหน้าของเมนู */
+}
+
+/* ขอบเขตสำหรับแถบค้นหา */
+.search-bar-container {
+  position: relative;
+  display: flex;
+  width: 0%;
+  height: 2px;
+  background-color: transparent;
+  /* พื้นหลังโปร่งใส */
+  border-bottom: 2px solid #fdebc7;
+  /* เส้นสีดำ */
+  transition: width 0.3s ease, height 0.3s ease;
+  overflow: hidden;
+  z-index: 1500;
+  /* ตั้งค่า z-index ของแถบค้นหา */
+}
+
+/* ข้อความค้นหา */
+.search-bar-container::before {
+  content: "ค้นหา";
+  position: absolute;
+  top: -25px;
+  left: 0;
+  font-size: 14px;
+  color: #b38c61;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* ป้อนข้อความ */
+.search-input {
+  font-family: "Itim", serif;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  width: 100%;
+  padding: 5px;
+  color: #b38c61;
+  background: transparent;
+  /* พื้นหลังโปร่งใส */
+  transform: translateX(-100%);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+/* เมื่อแถบค้นหาถูกเปิด */
+.search-bar-container.active {
+  width: 125px;
+  height: 25px;
+}
+
+.search-bar-container.active::before {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.search-bar-container .search-input {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* เมื่อเมาส์ชี้ที่ไอคอนค้นหา */
+#search-icon:hover {
+  transform: scale(1.1);
+  /* ขยายขนาดไอคอน */
+  opacity: 0.8;
+  /* ทำให้ไอคอนโปร่งใสเล็กน้อย */
+}
+
+/* เมื่อคลิกที่ไอคอนค้นหา */
+#search-icon:active {
+  transform: scale(0.9);
+  /* ขยับไอคอนให้เล็กลงเล็กน้อยเมื่อคลิก */
+  opacity: 1;
+  /* คืนความทึบของไอคอน */
+}
+
+/* ทำให้ไอคอนค้นหาไม่ถูกกระทบโดยการเปิดแถบค้นหา */
+.search-bar-container.active+#search-icon:hover {
+  transform: scale(1.1);
+  /* ให้ลอยขึ้นเมื่อลอยเมาส์บนไอคอนค้นหา */
+  opacity: 0.8;
+  /* ทำให้ไอคอนโปร่งใสเล็กน้อย */
+}
+
+
+
+
+
+
+/* ปุ่ม scrollToTop อยู่มุมขวาล่าง */
+.scrollToTop {
+  position: fixed;
+  /* ปักหมุดตำแหน่งให้คงที่ */
+  bottom: 24px;
+  /* ระยะห่างจากด้านล่าง */
+  right: 24px;
+  /* ระยะห่างจากด้านขวา */
+  background-color: #ffffff;
+  /* สีพื้นหลังของปุ่ม */
+  color: transparent;
+  /* สีตัวหนังสือ */
+  border-radius: 50%;
+  /* ทำให้ปุ่มเป็นวงกลม */
+  width: 28px;
+  /* ความกว้างของปุ่ม */
+  height: 28px;
+  /* ความสูงของปุ่ม */
+  display: flex;
+  /* ใช้ flex เพื่อจัดตำแหน่งไอคอน */
+  justify-content: center;
+  /* จัดกลางแนวนอน */
+  align-items: center;
+  /* จัดกลางแนวตั้ง */
+  font-size: 16px;
+  /* ขนาดของไอคอน */
+  box-shadow: 0 4px 8px #b38c61;
+  /* เงาให้ปุ่มดูเด่น */
+  transition: opacity 0.3s;
+  /* ทำให้มีการเปลี่ยนแปลง opacity อย่างนุ่มนวล */
+  z-index: 9999;
+  /* เพิ่ม z-index ให้อยู่เหนือ container */
+}
+
+/* ซ่อนไว้จนกว่าจะเลื่อนลงมา */
+.scrollToTop.hidden {
+  opacity: 0;
+  pointer-events: none;
+  /* ห้ามคลิกเมื่อปุ่มหายไป */
+}
+
+.scrollToTop:hover {
+  background-color: #ffffff;
+  /* สีพื้นหลังเปลี่ยนเมื่อ hover */
+}
+
+/* การปรับแต่งไอคอนลูกศรในปุ่ม */
+.scrollToTop .fas {
+  font-size: 22px;
+  /* ขนาดของไอคอนลูกศร */
+  color: #b38c61;
+  /* สีเริ่มต้นของลูกศร */
+  transition: color 0.3s;
+  /* เพิ่มการเปลี่ยนแปลงสีอย่างนุ่มนวล */
+}
+
+/* เมื่อ hover ที่ปุ่ม ให้เปลี่ยนสีลูกศร */
+.scrollToTop:hover .fas {
+  color: #dcbf94;
+  /* เปลี่ยนสีลูกศรเป็นสีเหลืองเมื่อ hover */
+}
+
+/* เมื่อคลิกที่ปุ่ม ลูกศรจะมีสีที่แตกต่าง */
+.scrollToTop:active .fas {
+  color: #060a1de6;
+  /* เปลี่ยนสีลูกศรเป็นสีส้มเมื่อคลิก */
+}
+
+
+
+
+
+
+/* ช่องรวมตอน และช่องค้นหา */
+body {
+  font-family: "Itim", serif;
+  font-weight: bold;
+  background-color: #1c1c1c;
+  margin: 0;
+  padding: 0;
+}
+
+/* สีฟอนต์ด้านบน กล่องใหญ่ */
+body,
+.bixbox {
+  color: #fdebc7
+}
+
+/* กล่องใหญ่ 
+.bixbox {
+  max-width: 900px;
+  margin: -55px;
+  padding: 20px;
+  background-color: #000000;
+  border-radius: 10px;
+}
+*/
+
+.bixbox h2 {
+  color: #ff0000;
+  font-size: 18px;
+  font-weight: normal;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: 2px solid #ff4747;
+  padding-bottom: 10px;
+}
+
+/*
+ตอนแรก ตอนล่าสุด
+.releases,
+.lastend {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.inepcx {
+  text-align: center;
+}
+
+/* สีฟอนต์กล่องเล็ก ย้อนกลับ-ต่อไป */
+.inepcx a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 14px;
+  background-color: #3c3c3c;
+  padding: 15px 15px;
+  border-radius: 5px;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.inepcx a:hover {
+  background-color: #913131;
+}
+
+
+
+
+
+
+.search-chapter {
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.search-chapter input {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  font-size: 14px;
+  border: 2px solid #dcbf94;
+  border-radius: 5px;
+  background-color: #333333;
+  color: #fdebc7;
+}
+
+/* ซ่อนตอนที่ไม่ตรงกับการค้นหา */
+.eplister li.hidden {
+  display: none;
+}
+
+/* โหมด Center เมื่อค้นหา */
+.eplister ul.center-mode {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* รีเซ็ตเป็น Grid แถวละ 6 ตอน */
+.eplister ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+  justify-content: center;
+  color: transparent;
+}
+
+/* สีฟอนต์ของกล่องเล็ก ด้านล่าง */
+.eplister li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #fdebc7;
+  padding: 10px;
+  transition: background-color 0.3s;
+  border: 0.5px solid #fdebc7;
+  border-radius: 5px;
+  background-color: #333333;
+}
+
+/* สีฟอนต์เมื่อเม้าส์ชี้ที่กล่องเล็กด้านล่าง */
+.eplister li a:hover {
+  background-color: #e4b070;
+}
+
+/* ความกว้างในช่องเลือกตอน */
+.chapternum {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* ขนาด/สีฟอนต์วันที่อัพเดทตอนใหม่ */
+.chapterdate {
+  font-size: 12px;
+  color: #b38c61;
+}
+
+/* การเก็บรักษาค่าสีดั้งเดิมภายนอกกล่อง */
+body:not(.bixbox) {
+  color: initial;
+}
+
+.item {
+  margin: 0 10px;
+  /* เพิ่มระยะห่างระหว่างไอเท็ม */
+}
+
+/* การแสดงผล Navigation */
+.episode-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.episode-navigation a {
+  background-color: #e4b070;
+  color: #000000;
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.episode-navigation a:hover {
+  background-color: #ffffff;
+}
+

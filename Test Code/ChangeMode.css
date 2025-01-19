@@ -1,0 +1,61 @@
+/* สไตล์พื้นฐาน */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    /* สมูทเมื่อเปลี่ยนโหมด */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* โหมดกลางวัน (พื้นฐาน) */
+body {
+    background-color: #ffffff;
+    color: #333;
+}
+
+button {
+    background-color: #333;
+    color: #ffffff;
+}
+
+/* โหมดกลางคืน */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+button.dark-mode {
+    background-color: #e0e0e0;
+    color: #121212;
+}
+
+/* ปรับรูปภาพ */
+.profile-pic {
+    width: 555px;
+    height: auto;
+    border-radius: 12%;
+    /* ทำให้รูปภาพเป็นวงกลม */
+    margin: auto;
+    display: block;
+
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    /* เพิ่มเงาเล็กน้อย */
+  }

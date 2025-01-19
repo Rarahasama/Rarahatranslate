@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css&quot; rel=" stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <Link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css&quot; rel=" stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>พื้นที่หลังเคาน์เตอร์</title>
+
+</head>
+
+<!--"background-image: url('Kaito & Alice.png');-->
+<body style="background-color: rgb(34, 26, 34); background-size: cover; background-repeat: no-repeat;">
+
+    <!-- เนื้อหาของ sidenav -->
+    <div id="mySidenav" class="sidenav chapter-selector app-container">
+        <nav class="navbar">
+            <ul>
+                <a href="index.html" target="_blank">
+                    <img src="Raraha 1.png" alt="Me" class="profile-pic">
+                    <a href="index.html">หน้าหลัก</a>
+                    <a href="หน้ารวมตอน.html">รวมตอน</a>
+                    <a href="#">ช่องทางติดตาม</a>
+                    <div id="search-container">
+                        <a href="#" id="search-icon" onclick="toggleSearchBar(event)">
+                            <i class="fas fa-search"></i>
+                        </a>
+                        <div id="search-bar-container" class="search-bar-container">
+                            <input type="text" placeholder="พิมพ์เพื่อค้นหา..." class="search-input" />
+                        </div>
+        </nav>
+    </div>
+
+
+    <!-- CDN สำหรับ Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <!-- ปุ่ม Scroll to Top -->
+    <a href="#" class="scrollToTop" id="scrollToTopButton">
+        <span class="fas fa-arrow-up"></span> <!-- ใช้ไอคอนลูกศรขึ้น -->
+    </a>
+
+    <!-- ปุ่มเมนู -->
+    <button class="menu-btn" id="menuBtn" onclick="toggleNav()">&#9776;</button>
+
+
+ <script>
+
+      function toggleSearchBar(event) {
+        event.preventDefault();
+        const searchIcon = document.getElementById("search-icon");
+        const searchBarContainer = document.getElementById("search-bar-container");
+        const searchInput = document.querySelector(".search-input");
+
+        const isActive = searchBarContainer.classList.contains("active");
+
+        if (isActive) {
+          closeSearchBar(searchIcon, searchBarContainer, searchInput);
+        } else {
+          openSearchBar(searchIcon, searchBarContainer);
+        }
+      }
+
+      function openSearchBar(searchIcon, searchBarContainer) {
+        searchBarContainer.classList.add("active");
+        searchIcon.classList.add("hide"); // ซ่อนไอคอนค้นหาเมื่อเปิดแถบค้นหา
+        document.addEventListener("click", closeSearchOnOutsideClick);
+      }
+
+      function closeSearchBar(searchIcon, searchBarContainer, searchInput) {
+        searchBarContainer.classList.remove("active");
+        searchIcon.classList.remove("hide"); // แสดงไอคอนค้นหากลับ
+        searchInput.value = "";
+        document.removeEventListener("click", closeSearchOnOutsideClick);
+      }
+
+      function closeSearchOnOutsideClick(event) {
+        const searchBarContainer = document.getElementById("search-bar-container");
+        const searchIcon = document.getElementById("search-icon");
+
+        if (!searchBarContainer.contains(event.target) && event.target !== searchIcon) {
+          const searchInput = document.querySelector(".search-input");
+          closeSearchBar(searchIcon, searchBarContainer, searchInput);
+        }
+      }
+
+      let isOpen = false; // สถานะเมนูเปิดหรือปิด
+
+      function toggleNav() {
+        // การเลื่อน
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function (e) {
+            e.preventDefault(); // ป้องกันการทำงานปกติของลิงก์
+            const target = document.querySelector(this.getAttribute('href'));
+
+            if (target) {
+              target.scrollIntoView({
+                behavior: 'smooth', // การเลื่อนแบบสมูท
+                block: 'start' // เลื่อนไปที่จุดเริ่มต้นของเป้าหมาย
+              });
+            }
+          });
+        });
+
+        // ตัวอ่านค่า nav
+        const sidenav = document.getElementById("mySidenav");
+        const menuBtn = document.getElementById("menuBtn");
+        const body = document.body;
+
+        if (!isOpen) {
+          // เปิดเมนู
+          sidenav.style.width = "250px"; //main.style.marginLeft = "250px";
+          menuBtn.innerHTML = "&times;"; // เปลี่ยนเป็นกากะบาท
+          body.classList.add("dimmed"); // เพิ่มคลาสเมื่อเปิดเมนู
+          sidenav.classList.remove("closed"); // ทำให้ข้อความค่อย ๆ ปรากฏ
+        } else {
+          // ปิดเมนู
+          sidenav.style.width = "0";
+          menuBtn.innerHTML = "&#9776;"; // เปลี่ยนเป็น ☰
+          body.classList.remove("dimmed"); // ลบคลาสเมื่อปิดเมนู
+          sidenav.classList.add("closed"); // ทำให้ข้อความเลือนหาย
+        }
+
+        isOpen = !isOpen; // สลับสถานะ
+
+        document.addEventListener('scroll', function () {
+          var button = document.getElementById('scrollToTopButton');
+          console.log(window.scrollY); // ตรวจสอบค่า scrollY
+          if (window.scrollY > 200) {
+            button.classList.remove('hidden');
+          } else {
+            button.classList.add('hidden');
+          }
+        });
+
+        document.getElementById('scrollToTopButton').addEventListener('click', function (event) {
+          event.preventDefault();
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+      }
+
+    </script>
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js&quot; integrity="
+      sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js&quot; integrity="
+      sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js&quot; integrity="
+      sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    <!-- ใส่ไฟล์ JavaScript -->
+    <script src="path/to/your/javascript.js" defer></script>
+
+</body>
+
+</html>

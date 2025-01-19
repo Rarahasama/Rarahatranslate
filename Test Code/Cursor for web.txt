@@ -1,0 +1,248 @@
+HTML
+
+<div id="pointer"><h2>pointer</h2></div>
+<div id="hand"><h2>hand</h2></div>
+<div id="crosshair"><h2>crosshair</h2></div>
+<div id="move"><h2>move</h2></div>
+<div id="wait"><h2>wait</h2></div>
+<div id="help"><h2>help</h2></div>
+<div id="text"><h2>text</h2></div>
+<div id="e-resize"><h2>e-resize</h2></div>
+<div id="ne-resize"><h2>ne-resize</h2></div>
+<div id="nw-resize"><h2>nw-resize</h2></div>
+<div id="sw-resize"><h2>sw-resize</h2></div>
+<div id="progress"><h2>progress</h2></div>
+<div id="not-allowed"><h2>not-allowed</h2></div>
+<div id="all-scroll"><h2>all-scroll</h2></div>
+
+
+CSS
+
+DIV
+{
+  background-color: ActiveCaption;
+  float: left;
+  margin: .4em;
+  width: 150px;
+  height: 150px;
+}
+
+H2
+{
+  text-align: center;
+}
+
+#auto
+{
+  cursor: auto;
+}
+
+#none
+{
+  cursor: none;
+}
+
+#pointer
+{
+  cursor: pointer;
+}
+
+#hand
+{
+  cursor: hand;
+}
+
+#crosshair
+{
+  cursor: crosshair;
+}
+
+#move
+{
+  cursor: move;
+}
+
+#wait
+{
+  cursor: wait;
+}
+
+#help
+{
+  cursor: help;
+}
+
+#text
+{
+  cursor: text;
+}
+
+#e-resize
+{
+  cursor: e-resize;
+}
+
+#ne-resize
+{
+  cursor: ne-resize;
+}
+
+#nw-resize
+{
+  cursor: nw-resize;
+}
+
+#se-resize
+{
+  cursor: se-resize;
+}
+
+#sw-resize
+{
+  cursor: sw-resize;
+}
+
+#s-resize
+{
+  cursor: s-resize;
+}
+
+#w-resize
+{
+  cursor: w-resize;
+}
+
+#default
+{
+  cursor: default;
+}
+
+#url
+{
+  cursor: auto; // Fallback should be specified separately for IE.
+  cursor: url(http://www.hscripts.com/images/next.gif) 2 2, auto; // See: https://developer.mozilla.org/en-US/docs/Web/CSS/cursor/url for more info
+}
+
+#copy
+{
+  cursor: copy;
+}
+
+#alias
+{
+  cursor: alias;
+}
+
+#context-menu
+{
+  cursor: context-menu;
+}
+
+#cell
+{
+  cursor: cell;
+}
+
+#grab
+{
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+#grabbing
+{
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+#spinning
+{
+  cursor: spinning;
+}
+
+#count-up
+{
+  cursor: count-up;
+}
+
+#count-down
+{
+  cursor: count-down;
+}
+
+#count-up-down
+{
+  cursor: count-up-down;
+}
+
+#progress
+{
+  cursor: progress;
+}
+
+#vertical-text
+{
+  cursor: vertical-text;
+}
+
+#no-drop
+{
+  cursor: no-drop;
+}
+
+#not-allowed
+{
+  cursor: not-allowed;
+}
+
+#ew-resize
+{
+  cursor: ew-resize;
+}
+
+#ns-resize
+{
+  cursor: ns-resize;
+}
+
+#nesw-resize
+{
+  cursor: nesw-resize;
+}
+
+#nwse-resize
+{
+  cursor: nwse-resize;
+}
+
+#col-resize
+{
+  cursor: col-resize;
+}
+
+#row-resize
+{
+  cursor: row-resize;
+}
+
+#all-scroll
+{
+  cursor: all-scroll;
+}
+
+#zoom-in
+{
+  cursor: -moz-zoom-in;
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
+}
+
+#zoom-out
+{
+  cursor: -moz-zoom-out;
+  cursor: -webkit-zoom-out;
+  cursor: zoom-out;
+}
+
